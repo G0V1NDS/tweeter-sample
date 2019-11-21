@@ -1,0 +1,194 @@
+[
+    {
+        "model": "user.user",
+        "pk": 1,
+        "fields": {
+            "password": "pbkdf2_sha256$150000$cf2J7W5iz8K7$vQtstkZHZgwhM2Cz8zyEmJHotEGIS7Enw7h3slDH0mk=",
+            "last_login": "2019-05-10T12:16:47.980Z",
+            "deleted_on": null,
+            "created_on": "2019-05-09T14:36:05.216Z",
+            "updated_on": "2019-05-09T19:41:35.274Z",
+            "status": "1",
+            "email": "admin@example.com",
+            "username": null,
+            "name": "admin",
+            "is_active": true,
+            "is_staff": true,
+            "is_superuser": true,
+            "is_id_card_issued": false,
+            "is_authority_letter_issued": false
+        }
+    },
+    {
+        "model": "user.user",
+        "pk": 2,
+        "fields": {
+            "password": "pbkdf2_sha256$150000$qbN90PxBEity$zNiP64I/RZ9aNt1LH1QGJRQ1AB3VpQ98HmcyhAADq9c=",
+            "last_login": "2019-05-10T12:16:47.980Z",
+            "deleted_on": null,
+            "created_on": "2019-05-09T14:36:05.216Z",
+            "updated_on": "2019-05-09T19:41:35.274Z",
+            "status": "1",
+            "email": "user1@example.com",
+            "username": null,
+            "name": "user1",
+            "is_active": true,
+            "is_staff": true,
+            "is_superuser": true,
+            "is_id_card_issued": false,
+            "is_authority_letter_issued": false
+        }
+    },
+    {
+        "model": "user.user",
+        "pk": 3,
+        "fields": {
+            "password": "pbkdf2_sha256$150000$qbN90PxBEity$zNiP64I/RZ9aNt1LH1QGJRQ1AB3VpQ98HmcyhAADq9c=",
+            "last_login": "2019-05-10T12:16:47.980Z",
+            "deleted_on": null,
+            "created_on": "2019-05-09T14:36:05.216Z",
+            "updated_on": "2019-05-09T19:41:35.274Z",
+            "status": "1",
+            "email": "user2@example.com",
+            "username": null,
+            "name": "user2",
+            "is_active": true,
+            "is_staff": true,
+            "is_superuser": true,
+            "is_id_card_issued": false,
+            "is_authority_letter_issued": false
+        }
+    },
+    {
+        "model": "user.user",
+        "pk": 4,
+        "fields": {
+            "password": "pbkdf2_sha256$150000$qbN90PxBEity$zNiP64I/RZ9aNt1LH1QGJRQ1AB3VpQ98HmcyhAADq9c=",
+            "last_login": "2019-05-10T12:16:47.980Z",
+            "deleted_on": null,
+            "created_on": "2019-05-09T14:36:05.216Z",
+            "updated_on": "2019-05-09T19:41:35.274Z",
+            "status": "1",
+            "email": "user3@example.com",
+            "username": null,
+            "name": "user3",
+            "is_active": true,
+            "is_staff": true,
+            "is_superuser": true,
+            "is_id_card_issued": false,
+            "is_authority_letter_issued": false
+        }
+    },
+    {
+        "model": "tweet.tweet",
+        "pk": 1,
+        "fields": {
+            "content": "Tweet 1",
+            "deleted_on": null,
+            "created_on": "2019-05-09T14:36:05.216Z",
+            "updated_on": "2019-05-09T19:41:35.274Z",
+            "status": "1",
+            "user_id": 2,
+            "original_user_id": 2,
+            "tweet_id": null,
+            "is_retweet": false,
+            "is_reply": false
+        }
+    },
+    {
+        "model": "tweet.tweet",
+        "pk": 2,
+        "fields": {
+            "content": "Tweet 2",
+            "deleted_on": null,
+            "created_on": "2019-05-09T14:36:05.216Z",
+            "updated_on": "2019-05-09T19:41:35.274Z",
+            "status": "1",
+            "user_id": 3,
+            "original_user_id": 3,
+            "tweet_id": null,
+            "is_retweet": false,
+            "is_reply": false
+        }
+    },
+    {
+        "model": "tweet.tweet",
+        "pk": 3,
+        "fields": {
+            "content": "Re-tweet 1",
+            "deleted_on": null,
+            "created_on": "2019-05-09T14:36:05.216Z",
+            "updated_on": "2019-05-09T19:41:35.274Z",
+            "status": "1",
+            "user_id": 3,
+            "original_user_id": 2,
+            "tweet_id": 1,
+            "is_retweet": true,
+            "is_reply": false
+        }
+    },
+    {
+        "model": "tweet.tweet",
+        "pk": 4,
+        "fields": {
+            "content": "Reply 1",
+            "deleted_on": null,
+            "created_on": "2019-05-09T14:36:05.216Z",
+            "updated_on": "2019-05-09T19:41:35.274Z",
+            "status": "1",
+            "user_id": 3,
+            "original_user_id": 2,
+            "tweet_id": 1,
+            "is_retweet": false,
+            "is_reply": true
+        }
+    },
+    {
+        "model": "tweet.tweet",
+        "pk": 5,
+        "fields": {
+            "content": "Reply 2",
+            "deleted_on": null,
+            "created_on": "2019-05-09T14:36:05.216Z",
+            "updated_on": "2019-05-09T19:41:35.274Z",
+            "status": "1",
+            "user_id": 3,
+            "original_user_id": 2,
+            "tweet_id": 1,
+            "is_retweet": false,
+            "is_reply": true
+        }
+    },
+    {
+        "model": "tweet.tweet",
+        "pk": 6,
+        "fields": {
+            "content": "Reply Reply 1",
+            "deleted_on": null,
+            "created_on": "2019-05-09T14:36:05.216Z",
+            "updated_on": "2019-05-09T19:41:35.274Z",
+            "status": "1",
+            "user_id": 3,
+            "original_user_id": 2,
+            "tweet_id": 4,
+            "is_retweet": false,
+            "is_reply": true
+        }
+    },
+    {
+        "model": "tweet.tweet",
+        "pk": 7,
+        "fields": {
+            "content": "Reply Reply Reply 1",
+            "deleted_on": null,
+            "created_on": "2019-05-09T14:36:05.216Z",
+            "updated_on": "2019-05-09T19:41:35.274Z",
+            "status": "1",
+            "user_id": 3,
+            "original_user_id": 2,
+            "tweet_id": 6,
+            "is_retweet": false,
+            "is_reply": true
+        }
+    }
+]

@@ -1,0 +1,28 @@
+version: '2'
+
+services:
+  mysql_tweeter:
+    image: mysql:5.7
+    container_name: mysql_tweeter
+    command: mysqld --user=root
+    restart: always
+    volumes:
+      - mysqlData:/var/lib/mysql
+      - ~/dump:/dump
+    environment:
+      - MYSQL_DATABASE=tweeter_test
+      - MYSQL_ROOT_PASSWORD=tw33ter
+    entrypoint:
+      sh -c "
+        echo 'CREATE DATABASE IF NOT EXISTS tweeter_development; CREATE DATABASE IF NOT EXISTS tweeter_staging; CREATE DATABASE IF NOT EXISTS tweeter_production;' > /docker-entrypoint-initdb.d/init.sql;
+        /usr/local/bin/docker-entrypoint.sh --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+      "
+    ports:
+      - "3306:3306"
+    networks:
+      custom:
+volumes:
+  mysqlData:
+networks:
+  custom:
+    external: true

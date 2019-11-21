@@ -1,0 +1,31 @@
+version: '2'
+
+services:
+  app:
+    build:
+      context: .
+    container_name: app
+    volumes:
+      - /var/www/tweeter-backend/static:/app/static
+      - ./tmp:/app/tmp
+    environment:
+      - SECRET_KEY=wclp6&e328pg53z_kiho&%ld98y08g6%t@gy37zca55hrk_ip
+      - DEBUG=True
+      - DB_NAME=tweeter_test
+      - DB_USERNAME=root
+      - DB_PASSWORD=tw33ter
+      - DB_HOST=mysql_tweeter
+      - DB_PORT=3306
+      - DJANGO_MANAGEPY_MIGRATE=on
+      - PYTHON_ENV=test
+      - DJANGO_SETTINGS_MODULE=main.settings.test
+      - DJANGO_MANAGEPY_COLLECTSTATIC=on
+    external_links:
+      - mysql_tweeter:mysql_tweeter
+    ports:
+      - "8000:8000"
+    networks:
+      custom:
+networks:
+  custom:
+    external: true

@@ -1,0 +1,46 @@
+
+version: '2'
+
+services:
+  mysql_tweeter:
+    image: mysql
+    container_name: mysql_tweeter
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    volumes:
+      - mysqlData:/var/lib/mysql
+      - ~/dump:/dump
+      - tweeter.cnf:/etc/mysql/conf.d/tweeter.cnf
+    environment:
+      - MYSQL_DATABASE=tweeter_development
+      - MYSQL_ROOT_PASSWORD=tw33ter
+    ports:
+      - "3306:3306"
+    
+  # app:
+  #   build:
+  #     context: .
+  #   container_name: app
+  #   volumes:
+  #     - .:/app
+  #     - ./tmp:/app/tmp
+  #   environment:
+  # - SECRET_KEY=wclp6&e328pg53z_kiho&%ld98y08g6%t@gy37zca55hrk_ip
+  #     - DEBUG=True
+  #     - DB_NAME=tweeter_production
+  #     - DB_USERNAME=root
+  #     - DB_PASSWORD=tw33ter
+  #     - DB_HOST=mysql_tweeter
+  #     - DB_PORT=3306
+  #     - DJANGO_MANAGEPY_MIGRATE=on
+  #     - PYTHON_ENV=production
+  #     - DJANGO_SETTINGS_MODULE=main.settings.production
+  #     - DJANGO_MANAGEPY_COLLECTSTATIC=on
+  #   depends_on:
+  #     - mysql_tweeter
+  #     - chrome
+  #   ports:
+  #     - "8000:8000"
+volumes:
+  mysqlData:
+  tweeter.cnf:

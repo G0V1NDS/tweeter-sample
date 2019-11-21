@@ -1,0 +1,22 @@
+.DS_Store
+*.pyc
+.vscode/*
+.idea/*
+*.sqlite3
+.cache/
+*.DS_Store
+*.log
+*.log.*
+!/log/sample.log
+.env
+/static/uploads/*
+/static/*
+!/static/.gitkeep
+# /app/*/migrations/*
+# !/app/*/migrations/__init__.py
+start_dev.sh
+# **/migrations/**
+# !**/migrations
+# !**/migrations/__init__.py
+*.sql
+/tmp/*
